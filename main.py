@@ -1,17 +1,10 @@
+from random import randrange
 def readAssets(typeOfAssets):
     fileName = "assets/" + typeOfAssets + ".txt"
     asset = open(fileName, 'r')
-    lineContent = asset.read()
     listing = []
-    listing.append(lineContent)
-    inc = 0
-    while(lineContent):
-        inc = inc + 1
-        listing.append(lineContent)
-        lineContent = asset.read()
+    listing = asset.readlines()
     return listing
 inc = 0
 listAsf = readAssets("familyNames")
-while(listAsf[inc]):
-    print(listAsf[inc])
-    inc = inc + 1
+print(listAsf[randrange(0,len(listAsf))])
