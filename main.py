@@ -1,16 +1,17 @@
 def readAssets(typeOfAssets):
     fileName = "assets/" + typeOfAssets + ".txt"
     asset = open(fileName, 'r')
-    list[0] = typeOfAssets
+    lineContent = asset.read()
+    listing = []
+    listing.append(lineContent)
     inc = 0
     while(lineContent):
         inc = inc + 1
-        line[inc] = lineContent
+        listing.append(lineContent)
         lineContent = asset.read()
-    return list
-
+    return listing
 inc = 0
-listAsf = readAssets()
-while(listAsf[inc])
-
-print
+listAsf = readAssets("familyNames")
+while(listAsf[inc]):
+    print(listAsf[inc])
+    inc = inc + 1
