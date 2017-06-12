@@ -8,5 +8,5 @@ def readAssets(typeOfAssets):
 gender = "M"
 inc = 0
 listNames = readAssets("familyNames")
-listFirstNames = readAssets("firstNames")
+listFirstNames = readAssets("firstNames"+ gender)
 print(listNames[randrange(0,len(listNames))])
