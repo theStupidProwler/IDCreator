@@ -6,7 +6,7 @@ def readAssets(typeOfAssets):
     listing = []
     listing = asset.readlines()
     return listing
-def parseArgs(): #getopt is for fags
+def parseArgs(): 
     global gender, minAge, maxAge
     inc = 0
     if(len(sys.argv) == 1):
