@@ -3,10 +3,14 @@ def readAssets(typeOfAssets):
     asset = open(fileName, 'r')
     list[0] = typeOfAssets
     inc = 0
-    while(lineContent)
-    {
+    while(lineContent):
         inc = inc + 1
         line[inc] = lineContent
         lineContent = asset.read()
-    }
-readAssets()
+    return list
+
+inc = 0
+listAsf = readAssets()
+while(listAsf[inc])
+
+print
