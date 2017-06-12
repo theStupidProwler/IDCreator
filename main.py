@@ -6,5 +6,6 @@ def readAssets(typeOfAssets):
     listing = asset.readlines()
     return listing
 inc = 0
-listAsf = readAssets("familyNames")
-print(listAsf[randrange(0,len(listAsf))])
+listNames = readAssets("familyNames")
+listFirstNames = readAssets("firstNames")
+print(listNames[randrange(0,len(listNames))])
