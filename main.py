@@ -15,6 +15,11 @@ def parseArgs(): #getopt is for fags
         if(sys.argv[inc] == "-g"):
             inc = inc + 1
             gender = sys.argv[inc].upper()
+        else:
+            if(randrange(0,2) == 1):
+                gender = "F"
+            else:
+                gender = "M"
         if(sys.argv[inc] == "-a"):
             inc = inc + 1
             minNMax = sys.argv[inc]#.replace("","")
