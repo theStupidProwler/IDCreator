@@ -1,13 +1,14 @@
 from random import randrange
 import sys
 def readAssets(typeOfAssets):
-    fileName = "assets/" + typeOfAssets + ".txt"
+    global language
+    fileName = "assets/"+ language + "/" + typeOfAssets + ".txt"
     asset = open(fileName, 'r')
     listing = []
     listing = asset.readlines()
     return listing
 def parseArgs():
-    global gender, minAge, maxAge
+    global gender, minAge, maxAge, language
     inc = 0
     if(len(sys.argv) == 1):
         return
@@ -20,6 +21,9 @@ def parseArgs():
                 gender = "F"
             else:
                 gender = "M"
+        if(sys.argv[inc] == "-l"):
+            inc = inc + 1
+            language = sys.argv[inc].lower()
         if(sys.argv[inc] == "-a"):
             inc = inc + 1
             minNMax = sys.argv[inc]
@@ -30,7 +34,7 @@ def parseArgs():
 def age():
     global minAge, maxAge
     return randrange(minAge, maxAge)
-global gender
+global language
 parseArgs()
 inc = 0
 listNames = readAssets("familyNames")
