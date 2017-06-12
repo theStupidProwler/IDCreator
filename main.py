@@ -7,7 +7,7 @@ def readAssets(typeOfAssets):
     listing = asset.readlines()
     return listing
 def parseArgs(): #getopt is for fags
-    global gender
+    global gender, minAge, maxAge
     inc = 0
     if(len(sys.argv) == 1):
         return
@@ -15,9 +15,16 @@ def parseArgs(): #getopt is for fags
         if(sys.argv[inc] == "-g"):
             inc = inc + 1
             gender = sys.argv[inc].upper()
+        if(sys.argv[inc] == "-a"):
+            inc = inc + 1
+            minNMax = sys.argv[inc]#.replace("","")
+            minNMax = minNMax.split('-')
+            minAge = int(minNMax[0])
+            maxAge = int(minNMax[1]) + 1
         inc = inc + 1
 def age():
-    return randrange(randrange(1,16),randrange(50,80))
+    global minAge, maxAge
+    return randrange(minAge, maxAge)
 global gender
 parseArgs()
 inc = 0
