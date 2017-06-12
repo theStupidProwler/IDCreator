@@ -10,8 +10,8 @@ def readAssets(typeOfAssets):
 def parseArgs():
     global gender, minAge, maxAge, language
     inc = 0
-    if(len(sys.argv) == 1):
-        return
+    if(sys.argv[1] == "-h"):
+        
     while(inc < len(sys.argv)):
         if(sys.argv[inc] == "-g"):
             inc = inc + 1
@@ -43,8 +43,8 @@ inc = 0
 listNames = readAssets("familyNames")
 listFirstNames = readAssets("firstNames"+ gender)
 print("First Name:",end="")
-print(listFirstNames[randrange(0,randrange(0,len(listFirstNames)))])
+print(listFirstNames[randrange(0,randrange(0,len(listFirstNames)))].title())
 print("Family Name:",end="")
-print(listNames[randrange(0,len(listNames))])
+print(listNames[randrange(0,len(listNames))].title())
 print("Age:",end="")
 print(age())
