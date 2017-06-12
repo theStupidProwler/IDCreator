@@ -6,7 +6,7 @@ def readAssets(typeOfAssets):
     listing = []
     listing = asset.readlines()
     return listing
-def parseArgs(): 
+def parseArgs():
     global gender, minAge, maxAge
     inc = 0
     if(len(sys.argv) == 1):
@@ -22,7 +22,7 @@ def parseArgs():
                 gender = "M"
         if(sys.argv[inc] == "-a"):
             inc = inc + 1
-            minNMax = sys.argv[inc]#.replace("","")
+            minNMax = sys.argv[inc]
             minNMax = minNMax.split('-')
             minAge = int(minNMax[0])
             maxAge = int(minNMax[1]) + 1
