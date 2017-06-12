@@ -14,7 +14,7 @@ def parseArgs(): #getopt is for fags
     while(inc < len(sys.argv)):
         if(sys.argv[inc] == "-g"):
             inc = inc + 1
-            gender = sys.argv[inc]
+            gender = sys.argv[inc].upper()
         inc = inc + 1
 
 global gender
