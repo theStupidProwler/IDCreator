@@ -1,11 +1,24 @@
 from random import randrange
+import sys
 def readAssets(typeOfAssets):
     fileName = "assets/" + typeOfAssets + ".txt"
     asset = open(fileName, 'r')
     listing = []
     listing = asset.readlines()
     return listing
-gender = "M"
+def parseArgs(): #getopt is for fags
+    global gender
+    inc = 0
+    if(len(sys.argv) == 1):
+        return
+    while(inc < len(sys.argv)):
+        if(sys.argv[inc] == "-g"):
+            inc = inc + 1
+            gender = sys.argv[inc]
+        inc = inc + 1
+
+global gender
+parseArgs()
 inc = 0
 listNames = readAssets("familyNames")
 listFirstNames = readAssets("firstNames"+ gender)
