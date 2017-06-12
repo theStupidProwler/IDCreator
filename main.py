@@ -16,6 +16,8 @@ def parseArgs(): #getopt is for fags
             inc = inc + 1
             gender = sys.argv[inc].upper()
         inc = inc + 1
+def age():
+    return randrange(randrange(1,16),randrange(50,80))
 global gender
 parseArgs()
 inc = 0
@@ -23,3 +25,4 @@ listNames = readAssets("familyNames")
 listFirstNames = readAssets("firstNames"+ gender)
 print(listFirstNames[randrange(0,randrange(0,len(listFirstNames)))])
 print(listNames[randrange(0,len(listNames))])
+print(age())
