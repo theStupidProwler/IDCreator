@@ -16,7 +16,6 @@ def parseArgs(): #getopt is for fags
             inc = inc + 1
             gender = sys.argv[inc].upper()
         inc = inc + 1
-
 global gender
 parseArgs()
 inc = 0
