@@ -8,3 +8,4 @@ Ex: <code>python3.5 main.py</code>
     <code>python3.5 main.py -g M -a (1-10)</code>
     <code>python3.5 main.py -g F</code>
     <code>python3.5 main.py -a (12,19)</code>
+    
