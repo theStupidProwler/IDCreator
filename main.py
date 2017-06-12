@@ -30,6 +30,9 @@ def parseArgs():
             minNMax = minNMax.split('-')
             minAge = int(minNMax[0])
             maxAge = int(minNMax[1]) + 1
+        else:
+            minAge = 1
+            maxAge = 115
         inc = inc + 1
 def age():
     global minAge, maxAge
