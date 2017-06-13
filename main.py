@@ -15,11 +15,11 @@ def parseArgs():
             print("Usage:  main.py -g <genderType(M/F)> -a <AgeBetween(min-max)> -l <language>\n Ex: \n\tpython3.5 main.py "+
                 "\n\tpython3.5 main.py -g M -a 1-10 -l fr"+
                 "\n\tpython3.5 main.py -g F"+
-                "\n\tpython3.5 main.py -a 12,19 -l en")
+                "\n\tpython3.5 main.py -a 12,19 -l en\n")
             print("IDENTITY GENERATION\n", "\t-g <genderType>: choose gender (random is default)\n",
             "\t-a <AgeBetween min-max>: an age between 1 and 115 is default\n",
             "\t-l <language>: fr or en, default is en\n")
-                sys.exit("No argument found")
+            sys.exit("No argument found")
         if(sys.argv[inc] == "-g"):
             inc = inc + 1
             gender = sys.argv[inc].upper()
@@ -27,7 +27,7 @@ def parseArgs():
             if(randrange(0,2) == 1):
                 gender = "F"
             else:
-                gender = "M"3
+                gender = "M"
         if(sys.argv[inc] == "-l"):
             inc = inc + 1
             language = sys.argv[inc].lower()
