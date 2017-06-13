@@ -12,10 +12,11 @@ def parseArgs():
     inc = 0
     while(inc < len(sys.argv)):
         if(sys.argv[inc] == "-h"):
-            sys.exit("Usage:  main.py -g <genderType(M/F)> -a <AgeBetween(min-max)> -l <language>\n Ex: \n\tpython3.5 main.py "+
+            print("Usage:  main.py -g <genderType(M/F)> -a <AgeBetween(min-max)> -l <language>\n Ex: \n\tpython3.5 main.py "+
                 "\n\tpython3.5 main.py -g M -a 1-10 -l fr"+
                 "\n\tpython3.5 main.py -g F"+
                 "\n\tpython3.5 main.py -a 12,19 -l en")
+                sys.exit("No argument found")
         if(sys.argv[inc] == "-g"):
             inc = inc + 1
             gender = sys.argv[inc].upper()
