@@ -2,7 +2,7 @@
 
 Useless piece of code who generate random identity
 
-Usage: <code> main.py -g <genderType(M/F)> -a <AgeBetween(min-max)> -l <language></code>
+Usage: <code> main.py -g <genderType(M/F)> -a <AgeBetween> -l <languageSpoken></code>
 
 Ex: </br><code>python3.5 main.py</code> </br>
     <code>python3.5 main.py -g M -a 1-10 -l fr</code> </br>
