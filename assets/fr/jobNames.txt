@@ -1,3 +1,5 @@
+Chomeur
+Etudiant
 Acheteur(euse)
 Animateur(trice)
 Antiquaire
@@ -21,37 +23,10 @@ Logisticien
 Patissier
 Poissonier
 Primeur
-
-
-
-PPrimeur
-Responsable de mResponsable de magasin
-Responsable de magasin bijouterie - horlResponsable de magasin bijouterie - horlogerie
-Responsable de magasin de pr&ecirc;t - &agrave; - Responsable de magasin de pr&ecirc;t - &agrave; - porter
-Responsable de service apr&egrave;s - Responsable de service apr&egrave;s - vente
-Responsable du d&eacute;veloppement dResponsable du d&eacute;veloppement durable
-Serveur(euse) en restServeur(euse) en restaurant
-Sommelier(i&egrave;re)">Sommelier(i&egrave;re)
-Teinturier(i&egrave;re) - Blanchisseur(euse)">Teinturier(i&egrave;re) - Blanchisseur(euse)
-Vendeur(euse) - CVendeur(euse) - Conseil
-Vendeur(euse) - conseil cVendeur(euse) - conseil caviste
-Vendeur(euse) - conseil en &eacute;lectrom&eacute;Vendeur(euse) - conseil en &eacute;lectrom&eacute;nager
-Vendeur(euse) - conseil en &eacute;pVendeur(euse) - conseil en &eacute;picerie
-Vendeur(euse) - conseil en animVendeur(euse) - conseil en animalerie
-Vendeur(euse) - conseil en articles de sport et lVendeur(euse) - conseil en articles de sport et loisirs
-Vendeur(euse) - conseil en bijouterie - horlVendeur(euse) - conseil en bijouterie - horlogerie
-Vendeur(euse) - conseil en briVendeur(euse) - conseil en bricolage
-Vendeur(euse) - conseil en chauVendeur(euse) - conseil en chaussures
-Vendeur(euse) - conseil en cr&egrave;merie - fromVendeur(euse) - conseil en cr&egrave;merie - fromagerie
-Vendeur(euse) - conseil en jardVendeur(euse) - conseil en jardinerie
-Vendeur(euse) - conseil en jouets et articles de pu&eacute;ricVendeur(euse) - conseil en jouets et articles de pu&eacute;riculture
-Vendeur(euse) - conseil en magasin de mVendeur(euse) - conseil en magasin de musique
-Vendeur(euse) - conseil en maroquVendeur(euse) - conseil en maroquinerie
-Vendeur(euse) - conseil en micro-informatique et multim&eacute;">Vendeur(euse) - conseil en micro-informatique et multim&eacute;dia
-Vendeur(euse) - conseil en parfumerie - cosm&eacute;Vendeur(euse) - conseil en parfumerie - cosm&eacute;tique
-Vendeur(euse) - conseil en photogVendeur(euse) - conseil en photographie
-Vendeur(euse) - conseil en pr&ecirc;t - &agrave; - Vendeur(euse) - conseil en pr&ecirc;t - &agrave; - porter
-Vendeur(euse) - conseil en produ">Vendeur(euse) - conseil en produits bio
-Vendeur(euse) - conseil en t&eacute;l&eacute;phonie Vendeur(euse) - conseil en t&eacute;l&eacute;phonie mobile
-Vendeur(euse) en pi&egrave;ces de rechange et accessoires automVendeur(euse) en pi&egrave;ces de rechange et accessoires automobiles
-Vendeur(euse) sur march&eacute;s / amVendeur(euse) sur march&eacute;s / ambulant
+Responsable de magasin
+Responsable de magasin bijouterie
+Responsable de magasin de prèt à porter
+Responsable de service vente
+Serveur en restaurant
+Sommelier
+Blanchisseur

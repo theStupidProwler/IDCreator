@@ -1,7 +1,14 @@
 from random import randrange
 import sys
 def metier():
-
+    global age
+    if(age > 16):
+        listMetiers = readAssets("jobNames")
+        if(randrange(0,11) == "1"):
+            return listMetiers[0]
+        if(age < 25 & randrange(1,age)< 15):
+            return listMetiers[1]
+        return listMetiers[randrange(1, len(listMetiers))]
 def readAssets(typeOfAssets):
     global language
     fileName = "assets/"+ language + "/" + typeOfAssets + ".txt"
@@ -13,6 +20,7 @@ def parseArgs():
     global gender, minAge, maxAge, language
     inc = 0
     while(inc < len(sys.argv)):
+        print("oui")
         if(sys.argv[inc] == "-h"):
             print("Usage:  main.py -g <genderType(M/F)> -a <AgeBetween(min-max)> -l <language>\n Ex: \n\tpython3.5 main.py "+
                 "\n\tpython3.5 main.py -g M -a 1-10 -l fr"+
@@ -37,6 +45,7 @@ def parseArgs():
             language = "en"
         if(sys.argv[inc] == "-a"):
             inc = inc + 1
+            inc = inc + 1
             minNMax = sys.argv[inc]
             minNMax = minNMax.split('-')
             minAge = int(minNMax[0])
@@ -44,6 +53,7 @@ def parseArgs():
         else:
             minAge = 1
             maxAge = 115
+            inc = inc + 1
 
 def age():
     global minAge, maxAge
@@ -58,6 +68,7 @@ print(listFirstNames[randrange(0,randrange(0,len(listFirstNames)))].title())
 print("Family Name:",end="")
 print(listNames[randrange(0,len(listNames))].title())
 print("Age:",end="")
-print(age())
+age = age()
+print(age)
 print("Metier:\n")
 print(metier())
