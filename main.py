@@ -18,6 +18,7 @@ def readAssets(typeOfAssets):
     return listing
 def parseArgs():
     global gender, minAge, maxAge, language
+    hasGender, hasAge, hasLanguage= False, False, False
     inc = 0
     while(inc < len(sys.argv)):
         if(sys.argv[inc] == "-h"):
@@ -30,9 +31,10 @@ def parseArgs():
             "\t-l <language>: fr or en, default is en\n")
             sys.exit("No argument found")
         if(sys.argv[inc] == "-g"):
+            hasGender = True
             inc = inc + 1
             gender = sys.argv[inc].upper()
-        else:
+        elif(hasGender == False):
             if(randrange(0,2) == 1):
                 gender = "F"
             else:
@@ -40,19 +42,20 @@ def parseArgs():
         if(sys.argv[inc] == "-l"):
             inc = inc + 1
             language = sys.argv[inc].lower()
-        else:
+            hasLanguage = True
+        elif(hasLanguage== False):
             language = "en"
         if(sys.argv[inc] == "-a"):
-            inc = inc + 1
+            hasAge = True
             inc = inc + 1
             minNMax = sys.argv[inc]
             minNMax = minNMax.split('-')
             minAge = int(minNMax[0])
             maxAge = int(minNMax[1]) + 1
-        else:
+        elif(hasAge== False):
             minAge = 1
             maxAge = 115
-            inc = inc + 1
+        inc = inc + 1
 
 def age():
     global minAge, maxAge
@@ -63,7 +66,7 @@ inc = 0
 listNames = readAssets("familyNames")
 listFirstNames = readAssets("firstNames"+ gender)
 print("First Name:",end="")
-print(listFirstNames[randrange(0,randrange(0,randrange(0,len(listFirstNames))))].title())
+print(listFirstNames[randrange(0,randrange(1,randrange(2,len(listFirstNames))))].title())
 print("Family Name:",end="")
 print(listNames[randrange(0,len(listNames))].title())
 print("Age:",end="")
