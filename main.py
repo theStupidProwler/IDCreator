@@ -20,7 +20,6 @@ def parseArgs():
     global gender, minAge, maxAge, language
     inc = 0
     while(inc < len(sys.argv)):
-        print("oui")
         if(sys.argv[inc] == "-h"):
             print("Usage:  main.py -g <genderType(M/F)> -a <AgeBetween(min-max)> -l <language>\n Ex: \n\tpython3.5 main.py "+
                 "\n\tpython3.5 main.py -g M -a 1-10 -l fr"+
@@ -64,7 +63,7 @@ inc = 0
 listNames = readAssets("familyNames")
 listFirstNames = readAssets("firstNames"+ gender)
 print("First Name:",end="")
-print(listFirstNames[randrange(0,randrange(0,len(listFirstNames)))].title())
+print(listFirstNames[randrange(0,randrange(0,randrange(0,len(listFirstNames))))].title())
 print("Family Name:",end="")
 print(listNames[randrange(0,len(listNames))].title())
 print("Age:",end="")
