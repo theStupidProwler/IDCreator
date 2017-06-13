@@ -1,6 +1,6 @@
 from random import randrange
 import sys
-def metier():
+def job():
     global age
     if(age > 16):
         listMetiers = readAssets("jobNames")
@@ -35,7 +35,7 @@ def parseArgs():
             hasGender = True
             inc = inc + 1
             gender = sys.argv[inc].upper()
-        elif(hasGender == False): 
+        elif(hasGender == False):
             if(randrange(0,2) == 1):
                 gender = "F"
             else:
@@ -73,5 +73,5 @@ print(listNames[randrange(0,len(listNames))].title())
 print("Age:",end="")
 age = age()
 print(age)
-print("Metier:\n")
-print(metier())
+print("\nJob:", end="")
+print(job())
