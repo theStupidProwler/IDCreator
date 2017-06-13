@@ -10,9 +10,12 @@ def readAssets(typeOfAssets):
 def parseArgs():
     global gender, minAge, maxAge, language
     inc = 0
-    if(sys.argv[1] == "-h"):
-        
     while(inc < len(sys.argv)):
+        if(sys.argv[inc] == "-h"):
+            sys.exit("Usage:  main.py -g <genderType(M/F)> -a <AgeBetween(min-max)> -l <language>\n Ex: \n\tpython3.5 main.py "+
+                "\n\tpython3.5 main.py -g M -a 1-10 -l fr"+
+                "\n\tpython3.5 main.py -g F"+
+                "\n\tpython3.5 main.py -a 12,19 -l en")
         if(sys.argv[inc] == "-g"):
             inc = inc + 1
             gender = sys.argv[inc].upper()
@@ -24,6 +27,8 @@ def parseArgs():
         if(sys.argv[inc] == "-l"):
             inc = inc + 1
             language = sys.argv[inc].lower()
+        else:
+            language = "en"
         if(sys.argv[inc] == "-a"):
             inc = inc + 1
             minNMax = sys.argv[inc]
