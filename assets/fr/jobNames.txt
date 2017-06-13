@@ -3,9 +3,8 @@ Etudiant
 Acheteur(euse)
 Animateur(trice)
 Antiquaire
-Boucher(&egrave;re) Charcutier(&egrave;re) Traiteur(e)
+Boucher
 Boulanger
-Charg&eacute;(e) d&#expansion r&eacute;seau
 Chef de rayon
 Chocolatier
 Coiffeur
