@@ -1,5 +1,7 @@
 from random import randrange
 import sys
+def city():
+
 def job():
     global age
     if(age > 16):
@@ -66,12 +68,15 @@ parseArgs()
 inc = 0
 listNames = readAssets("familyNames")
 listFirstNames = readAssets("firstNames"+ gender)
-print("First Name:",end="")
-print(listFirstNames[randrange(0,randrange(1,randrange(2,len(listFirstNames))))].title())
+print("\nFirst Name:",end="")
+firstName = listFirstNames[randrange(0,randrange(1,randrange(2,len(listFirstNames))))].title()
+print(firstName)
 print("Family Name:",end="")
-print(listNames[randrange(0,len(listNames))].title())
+familyName =listNames[randrange(0,len(listNames))].title()
+print(familyName)
 print("Age:",end="")
 age = age()
 print(age)
 print("\nJob:", end="")
-print(job())
+job = job()
+print(job)

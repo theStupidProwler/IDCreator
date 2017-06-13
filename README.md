@@ -15,11 +15,8 @@ Today, it only support french (fr) and english (en)
 
 # Outputs examples
 
-<code>alexandre@debian:~/IDCreator$ python3.4 main.py -l en -a 15-89 </code></br>
-<code>First Name:Katherine</code> </br>
- </br>
-<code>Family Name:Hawkins</code> </br>
- </br>
-<code>Age:44 </code> </br>
-</br>
-<code>Job:Architect</br> </code>
+<code>alexandre@debian:~/IDCreator$ python3.4 main.py -l en -a 15-89 </code></br></br>
+<code>First Name:Katherine</code> </br></br>
+<code>Family Name:Hawkins</code> </br> </br>
+<code>Age:44 </code> </br> </br>
+<code>Job:Architect </code>
