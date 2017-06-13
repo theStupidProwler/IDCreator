@@ -1,5 +1,7 @@
 from random import randrange
 import sys
+def metier():
+
 def readAssets(typeOfAssets):
     global language
     fileName = "assets/"+ language + "/" + typeOfAssets + ".txt"
@@ -42,7 +44,7 @@ def parseArgs():
         else:
             minAge = 1
             maxAge = 115
-        inc = inc + 1
+
 def age():
     global minAge, maxAge
     return randrange(minAge, maxAge)
@@ -57,3 +59,5 @@ print("Family Name:",end="")
 print(listNames[randrange(0,len(listNames))].title())
 print("Age:",end="")
 print(age())
+print("Metier:\n")
+print(metier())
