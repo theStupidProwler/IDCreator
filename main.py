@@ -39,7 +39,7 @@ def parseArgs():
             gender = sys.argv[inc].upper()
         elif(hasGender == False):
             if(randrange(0,2) == 1):
-                gender = "F"
+                gender = "F" #did u just assume mine
             else:
                 gender = "M"
         if(sys.argv[inc] == "-l"):
