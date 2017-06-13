@@ -5,10 +5,10 @@ def metier():
     if(age > 16):
         listMetiers = readAssets("jobNames")
         if(randrange(0,11) == "1"):
-            return listMetiers[0]
+            return listMetiers[0].title()
         if(age < 25 & randrange(1,age)< 15):
-            return listMetiers[1]
-        return listMetiers[randrange(1, len(listMetiers))]
+            return listMetiers[1].title()
+        return listMetiers[randrange(1, len(listMetiers))].title()
 def readAssets(typeOfAssets):
     global language
     fileName = "assets/"+ language + "/" + typeOfAssets + ".txt"
@@ -26,7 +26,8 @@ def parseArgs():
                 "\n\tpython3.5 main.py -g M -a 1-10 -l fr"+
                 "\n\tpython3.5 main.py -g F"+
                 "\n\tpython3.5 main.py -a 12,19 -l en\n")
-            print("IDENTITY GENERATION\n", "\t-g <genderType>: choose gender (random is default)\n",
+            print("IDENTITY GENERATION",#assassin
+             " \n\t-g <genderType>: choose gender (random is default)\n", #there isn't male pangenderfluidqueer yet
             "\t-a <AgeBetween min-max>: an age between 1 and 115 is default\n",
             "\t-l <language>: fr or en, default is en\n")
             sys.exit("No argument found")
@@ -34,7 +35,7 @@ def parseArgs():
             hasGender = True
             inc = inc + 1
             gender = sys.argv[inc].upper()
-        elif(hasGender == False):
+        elif(hasGender == False): 
             if(randrange(0,2) == 1):
                 gender = "F"
             else:

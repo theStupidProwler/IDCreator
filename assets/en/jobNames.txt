@@ -1,5 +1,5 @@
 unemployed
-Student
+student
 buyer
 actor
 farmer
