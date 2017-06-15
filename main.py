@@ -1,6 +1,5 @@
 from random import randrange
 import sys
-def city():
 
 def job():
     global age
@@ -11,6 +10,9 @@ def job():
         if(age < 25 & randrange(1,age)< 15):
             return listMetiers[1].title()
         return listMetiers[randrange(1, len(listMetiers))].title()
+def city():
+    listCity = readAssets("cityNames")
+    return listCity[randrange(0,randrange(0,randrange(len(listCity))))]
 def readAssets(typeOfAssets):
     global language
     fileName = "assets/"+ language + "/" + typeOfAssets + ".txt"
@@ -80,3 +82,5 @@ print(age)
 print("\nJob:", end="")
 job = job()
 print(job)
+city = city()
+print(city)
