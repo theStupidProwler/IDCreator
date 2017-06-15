@@ -8,40 +8,41 @@ class Character:
         self.city = ""
         self.age = ""
         self.job = ""
+        self.gender = "M"
 
-    def randomGender():
+    def randomGender(self):
         if(randrange(0,2) == 1):
             self.gender = "F" #did u just assume mine
         else:
             self.gender = "M"
 
-    def defineFamilyName():
+    def defineFamilyName(self):
         listNames = readAssets("familyNames")
         self.familyName = listNames[randrange(0,len(listNames))].title()
 
-    def defineFirstName(self.gender):
+    def defineFirstName(self):
         global language
-        listFirstNames = readAssets("firstNames"+ self.gender)
-        return listFirstNames[randrange(0,randrange(1,randrange(2,randrange(3,len(listFirstNames)))))].title()
+        typeOfAssets = "firstNames"+ self.gender
+        listFirstNames = readAssets(typeOfAssets)
+        self.firstName = listFirstNames[randrange(0,randrange(1,randrange(2,randrange(3,len(listFirstNames)))))].title()
 
-    def defineJob(self.age):
-        if(age > 16):
+    def defineJob(self):
+        if(self.age > 16):
             listMetiers = readAssets("jobNames")
             if(randrange(0,11) == "1"):
-                return listMetiers[0].title()
-            if(age < 25 & randrange(1,age)< 15):
-                return listMetiers[1].title()
-            return listMetiers[randrange(1, len(listMetiers))].title()
+                self.job = listMetiers[0].title()
+            if(self.age < 25 & randrange(1,self.age)< 15):
+                self.job = listMetiers[1].title()
+            self.job = listMetiers[randrange(1, len(listMetiers))].title()
 
-    def defineCity():
+    def defineCity(self):
         listCity = readAssets("cityNames")
-        return listCity[randrange(0,randrange(0,len(listCity)))]
+        self.city = listCity[randrange(0,randrange(1,len(listCity)))]
 
-    def defineAge():
-        global minAge, maxAge
-        return randrange(minAge, maxAge)
+    def defineAge(self, minAge, maxAge):
+        self.age = randrange(minAge, maxAge)
 
-def readAssets(self, typeOfAssets):
+def readAssets(typeOfAssets):
     global language
     fileName = "assets/"+ language + "/" + typeOfAssets + ".txt"
     asset = open(fileName, 'r')
@@ -50,7 +51,7 @@ def readAssets(self, typeOfAssets):
     return listing
 
 def parseArgs():
-    global McGender, minAge, maxAge, language
+    global language
     hasGender, hasAge, hasLanguage= False, False, False
     inc = 0
     while(inc < len(sys.argv)):
@@ -67,9 +68,9 @@ def parseArgs():
         if(sys.argv[inc] == "-g"):
             mainCharacter.gender = True
             inc = inc + 1
-            McGender = sys.argv[inc].upper()
+            mainCharacter.gender = sys.argv[inc].upper()
         elif(hasGender == False):
-            McGender = randomGender()
+            mainCharacter.randomGender()
         if(sys.argv[inc] == "-l"):
             inc = inc + 1
             language = sys.argv[inc].lower()
@@ -83,16 +84,23 @@ def parseArgs():
             minNMax = minNMax.split('-')
             minAge = int(minNMax[0])
             maxAge = int(minNMax[1]) + 1
+            mainCharacter.defineAge(minAge, maxAge)
         elif(hasAge== False):
             minAge = 1
             maxAge = 115
+            mainCharacter.defineAge(minAge, maxAge)
         inc = inc + 1
+def defineMainCharacter():
+    mainCharacter.defineFirstName()
+    mainCharacter.defineFamilyName()
+    mainCharacter.defineJob()
+    mainCharacter.defineCity()
 
 
 mainCharacter = Character()
 parseArgs()
+defineMainCharacter()
 inc = 0
-
 print("\nFirst Name:", mainCharacter.firstName)
 print("Family Name:",mainCharacter.familyName)
 print("Age:",mainCharacter.age)
