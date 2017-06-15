@@ -3,11 +3,11 @@ import sys
 
 def mainCharacter():
     global McFirstName, McFamilyName, McCity, McAge, McJob, McGender
-    McFirstName = familyName()
-    McFamilyName = firstName(McGender)
+    McFirstName = defineFamilyName()
+    McFamilyName = defineFirstName(McGender)
     McCity = defineCity()
     McAge = defineAge()
-    McJob = defineJob()
+    McJob = defineJob(McAge)
 
 def randomGender():
     if(randrange(0,2) == 1):
@@ -16,17 +16,16 @@ def randomGender():
         gender = "M"
     return gender
 
-def familyName():
+def defineFamilyName():
     listNames = readAssets("familyNames")
     return listNames[randrange(0,len(listNames))].title()
 
-def firstName(gender):
+def defineFirstName(gender):
     global language
     listFirstNames = readAssets("firstNames"+ gender)
     return listFirstNames[randrange(0,randrange(1,randrange(2,randrange(3,len(listFirstNames)))))].title()
 
-def defineJob():
-    global age
+def defineJob(age):
     if(age > 16):
         listMetiers = readAssets("jobNames")
         if(randrange(0,11) == "1"):
@@ -71,8 +70,7 @@ def parseArgs():
             inc = inc + 1
             McGender = sys.argv[inc].upper()
         elif(hasGender == False):
-            McGender = randomGender
-
+            McGender = randomGender()
         if(sys.argv[inc] == "-l"):
             inc = inc + 1
             language = sys.argv[inc].lower()
