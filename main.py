@@ -12,7 +12,7 @@ def job():
         return listMetiers[randrange(1, len(listMetiers))].title()
 def city():
     listCity = readAssets("cityNames")
-    return listCity[randrange(0,randrange(0,randrange(len(listCity))))]
+    return listCity[randrange(0,randrange(0,len(listCity)))]
 def readAssets(typeOfAssets):
     global language
     fileName = "assets/"+ language + "/" + typeOfAssets + ".txt"
