@@ -2,28 +2,30 @@ from random import randrange
 import sys
 
 def mainCharacter():
+    global McFirstName, McFamilyName, McCity, McAge, McJob, McGender
     McFirstName = familyName()
     McFamilyName = firstName(McGender)
-    McCity = city()
-    McAge = age()
-    McJob = job()
+    McCity = defineCity()
+    McAge = defineAge()
+    McJob = defineJob()
 
 def randomGender():
     if(randrange(0,2) == 1):
         gender = "F" #did u just assume mine
     else:
         gender = "M"
-return gender
+    return gender
 
 def familyName():
     listNames = readAssets("familyNames")
-    MCfamilyName =listNames[randrange(0,len(listNames))].title()
+    return listNames[randrange(0,len(listNames))].title()
 
 def firstName(gender):
+    global language
     listFirstNames = readAssets("firstNames"+ gender)
     return listFirstNames[randrange(0,randrange(1,randrange(2,randrange(3,len(listFirstNames)))))].title()
 
-def job():
+def defineJob():
     global age
     if(age > 16):
         listMetiers = readAssets("jobNames")
@@ -33,11 +35,11 @@ def job():
             return listMetiers[1].title()
         return listMetiers[randrange(1, len(listMetiers))].title()
 
-def city():
+def defineCity():
     listCity = readAssets("cityNames")
     return listCity[randrange(0,randrange(0,len(listCity)))]
 
-def age():
+def defineAge():
     global minAge, maxAge
     return randrange(minAge, maxAge)
 
@@ -67,7 +69,7 @@ def parseArgs():
         if(sys.argv[inc] == "-g"):
             hasGender = True
             inc = inc + 1
-            gender = sys.argv[inc].upper()
+            McGender = sys.argv[inc].upper()
         elif(hasGender == False):
             McGender = randomGender
 
@@ -92,6 +94,7 @@ def parseArgs():
 global language
 parseArgs()
 inc = 0
+mainCharacter()
 print("\nFirst Name:", McFirstName)
 print("Family Name:",McFamilyName)
 print("Age:",McAge)
