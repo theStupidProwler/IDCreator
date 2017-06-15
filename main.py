@@ -1,5 +1,19 @@
 from random import randrange
 import sys
+def mainCharacter():
+    MCfirstName = listFirstNames[randrange(0,randrange(1,randrange(2,randrange(3,len(listFirstNames)))))].title()
+    MCfamilyName =listNames[randrange(0,len(listNames))].title()
+    city = city()
+    age = age()
+    job = job()
+
+def familyName():
+    listNames = readAssets("familyNames")
+    MCfamilyName =listNames[randrange(0,len(listNames))].title()
+
+def firstName(gender):
+    listFirstNames = readAssets("firstNames"+ gender)
+    return listFirstNames[randrange(0,randrange(1,randrange(2,randrange(3,len(listFirstNames)))))].title()
 
 def job():
     global age
@@ -10,9 +24,15 @@ def job():
         if(age < 25 & randrange(1,age)< 15):
             return listMetiers[1].title()
         return listMetiers[randrange(1, len(listMetiers))].title()
+
 def city():
     listCity = readAssets("cityNames")
     return listCity[randrange(0,randrange(0,len(listCity)))]
+
+def age():
+    global minAge, maxAge
+    return randrange(minAge, maxAge)
+
 def readAssets(typeOfAssets):
     global language
     fileName = "assets/"+ language + "/" + typeOfAssets + ".txt"
@@ -20,6 +40,7 @@ def readAssets(typeOfAssets):
     listing = []
     listing = asset.readlines()
     return listing
+
 def parseArgs():
     global gender, minAge, maxAge, language
     hasGender, hasAge, hasLanguage= False, False, False
@@ -62,21 +83,11 @@ def parseArgs():
             maxAge = 115
         inc = inc + 1
 
-def age():
-    global minAge, maxAge
-    return randrange(minAge, maxAge)
 global language
 parseArgs()
 inc = 0
-listNames = readAssets("familyNames")
-listFirstNames = readAssets("firstNames"+ gender)
-firstName = listFirstNames[randrange(0,randrange(1,randrange(2,randrange(3,len(listFirstNames)))))].title() 
-familyName =listNames[randrange(0,len(listNames))].title()
-city = city()
-age = age()
-job = job()
-print("\nFirst Name:", firstName)
-print("Family Name:",familyName)
-print("Age:",age)
-print("\nJob:",job)
-print("City:",city)
+print("\nFirst Name:", MCfirstName)
+print("Family Name:",MCfamilyName)
+print("Age:",MCage)
+print("\nJob:",MCjob)
+print("City:",MCcity)
