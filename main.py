@@ -1,11 +1,19 @@
 from random import randrange
 import sys
+
 def mainCharacter():
-    MCfirstName = listFirstNames[randrange(0,randrange(1,randrange(2,randrange(3,len(listFirstNames)))))].title()
-    MCfamilyName =listNames[randrange(0,len(listNames))].title()
-    city = city()
-    age = age()
-    job = job()
+    McFirstName = familyName()
+    McFamilyName = firstName(McGender)
+    McCity = city()
+    McAge = age()
+    McJob = job()
+
+def randomGender():
+    if(randrange(0,2) == 1):
+        gender = "F" #did u just assume mine
+    else:
+        gender = "M"
+return gender
 
 def familyName():
     listNames = readAssets("familyNames")
@@ -42,7 +50,7 @@ def readAssets(typeOfAssets):
     return listing
 
 def parseArgs():
-    global gender, minAge, maxAge, language
+    global McGender, minAge, maxAge, language
     hasGender, hasAge, hasLanguage= False, False, False
     inc = 0
     while(inc < len(sys.argv)):
@@ -61,10 +69,8 @@ def parseArgs():
             inc = inc + 1
             gender = sys.argv[inc].upper()
         elif(hasGender == False):
-            if(randrange(0,2) == 1):
-                gender = "F" #did u just assume mine
-            else:
-                gender = "M"
+            McGender = randomGender
+
         if(sys.argv[inc] == "-l"):
             inc = inc + 1
             language = sys.argv[inc].lower()
@@ -86,8 +92,8 @@ def parseArgs():
 global language
 parseArgs()
 inc = 0
-print("\nFirst Name:", MCfirstName)
-print("Family Name:",MCfamilyName)
-print("Age:",MCage)
-print("\nJob:",MCjob)
-print("City:",MCcity)
+print("\nFirst Name:", McFirstName)
+print("Family Name:",McFamilyName)
+print("Age:",McAge)
+print("\nJob:",McJob)
+print("City:",McCity)
