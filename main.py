@@ -11,18 +11,17 @@ class Character:
 
     def randomGender():
         if(randrange(0,2) == 1):
-            gender = "F" #did u just assume mine
+            self.gender = "F" #did u just assume mine
         else:
-            gender = "M"
-            return gender
+            self.gender = "M"
 
     def defineFamilyName():
         listNames = readAssets("familyNames")
-        return listNames[randrange(0,len(listNames))].title()
+        self.familyName = listNames[randrange(0,len(listNames))].title()
 
     def defineFirstName(self.gender):
         global language
-        listFirstNames = readAssets("firstNames"+ gender)
+        listFirstNames = readAssets("firstNames"+ self.gender)
         return listFirstNames[randrange(0,randrange(1,randrange(2,randrange(3,len(listFirstNames)))))].title()
 
     def defineJob(self.age):
@@ -42,7 +41,7 @@ class Character:
         global minAge, maxAge
         return randrange(minAge, maxAge)
 
-def readAssets(typeOfAssets):
+def readAssets(self, typeOfAssets):
     global language
     fileName = "assets/"+ language + "/" + typeOfAssets + ".txt"
     asset = open(fileName, 'r')
