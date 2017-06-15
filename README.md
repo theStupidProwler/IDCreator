@@ -2,7 +2,7 @@
 
 Useless piece of code who generate random identity
 
-Usage: <code> main.py -g <genderType(M/F)> -a <Age Between(min-max)> -l <ISO 3166-2 Letters> -h </code> 
+Usage: <code> main.py -g <genderType(M/F)> -a <Age Between(min-max)> -l <ISO 3166-2 Letters> -h </code>
 
 Ex: </br><code>python3.5 main.py</code> </br>
     <code>python3.5 main.py -g M -a 1-10 -l fr</code> </br>
@@ -15,8 +15,9 @@ Today, it only support french (fr) and english (en)
 
 # Outputs examples
 
-<code>alexandre@debian:~/IDCreator$ python3.4 main.py -l en -a 15-89 </code></br></br>
+<code>alexandre@debian:~/IDCreator$ python3.4 main.py -l en -a 15-65 </code></br></br>
 <code>First Name:Katherine</code> </br></br>
 <code>Family Name:Hawkins</code> </br> </br>
 <code>Age:44 </code> </br> </br>
-<code>Job:Architect </code>
+<code>Job:Architect </code></br></br>
+<code>City: Atlanta</code>
