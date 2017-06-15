@@ -2,6 +2,7 @@ Paris
 Marseille
 Lyon
 Toulouse
+Balma
 Nice
 Nantes
 Strasbourg
@@ -77,7 +78,7 @@ Troyes
 Le Tampon
 La Seyne-sur-Mer
 Neuilly-sur-Seine
-Antony 
+Antony
 Lorient
 Saint-Quentin
 Noisy-le-Grand
